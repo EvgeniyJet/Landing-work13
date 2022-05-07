@@ -17,11 +17,15 @@ nav
 		flex-direction: column
 		justify-content: start
 		background-color: #fff
+		width: 100px
 		position: fixed
 		top: 0
 		right: -166px
 		bottom: 0
 		padding: 150px 40px 40px 40px
-		transition: right 0.5s
+		transition: right 0.5s, width 0.5s
+		z-index: 9
+
 		&.active
 			right: 0
+			width: 100%
