@@ -1,0 +1,27 @@
+nav
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 1124px
+	margin: 0 auto
+
+.navigation
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 500px
+
+@media (max-width:768px)
+	.navigation
+		order: 4
+		flex-direction: column
+		justify-content: start
+		background-color: #fff
+		position: fixed
+		top: 0
+		right: -166px
+		bottom: 0
+		padding: 150px 40px 40px 40px
+		transition: right 0.5s
+		&.active
+			right: 0

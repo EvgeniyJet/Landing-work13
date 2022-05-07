@@ -1,0 +1,44 @@
+.burger
+	width: 55px
+	height: 55px
+	border-radius: 10px
+	background: white
+	box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px
+	cursor: pointer
+	display: none
+	justify-content: center
+	align-items: center
+	padding: 5px
+	transition: all .5s ease
+	margin: 1em
+
+	&.active
+		background: rgb(56, 56, 56)
+		.strip
+			transform: scale(.85)
+			div:first-child
+				width: 20px
+				transform: translateY(8px) rotate(-30deg)
+			div:nth-child(2)
+				width: 38px
+			div:last-child
+				width: 20px
+				transform: translateY(-8px) rotate(30deg)
+
+	&-strip
+		transition: all .5s ease
+
+.strip div
+	height: 3px
+	border-radius: 2px
+	background: rgb(56, 56, 56)
+	margin: 10px
+	transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1)
+	width: 40px
+
+	.burger.active &
+		background: white
+@media (max-width:768px)
+	.burger
+		display: flex
+		z-index: 99
